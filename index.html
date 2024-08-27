@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page1</title>
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <h1>Ecommerce</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>New Season Arrivals</h2>
+        <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </section>
+
+    <section class="products">
+        <h2>Latest Products</h2>
+        <div id="product-filters">
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('electronics')">Electronics</button>
+            <button onclick="filterProducts('jewelery')">Jewelery</button>
+            <button onclick="filterProducts('men\'s clothing')">Men's Clothing</button>
+            <button onclick="filterProducts('women\'s clothing')">Women's Clothing</button>
+        </div>
+        <div id="product-list">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ by [Your Name]</p>
+    </footer>
+
+    <script src="./app.js"></script>
 </body>
 </html>
+
+ 
