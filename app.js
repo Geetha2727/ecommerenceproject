@@ -38,32 +38,38 @@ function displayProducts(products, category) {
     });
 }
 
-function addToCart(productId) {
-    const product = products.find(prod => prod.id === productId);
-    const cartItem = cart.find(item => item.id === productId);
-
-    if (cartItem) {
-        // If the product is already in the cart, you can increase the quantity or just alert the user
-        alert('This item is already in your cart.');
-    } else {
-        cart.push({ ...product, quantity: 1 });
-        localStorage.setItem('cart', JSON.stringify(cart));
-        // window.location.href=`cart.html`;
-        updateCartCount();
-    }
-}
-
-
-function updateCartCount() {
-    const cartCountElement = document.getElementById('cart-count');
-    cartCountElement.textContent = cart.length;
-}
-
 function viewDetails(productId) {
-    // Example redirection to a details page
     window.location.href = `http://127.0.0.1:5500/details.html?id=${productId}`;
 }
 
 function filterProducts(category) {
     displayProducts(products, category);
+}
+
+function addToCart(id, title, image, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProductIndex = cart.findIndex(p => p.id === id);
+
+    if (existingProductIndex !== -1) {
+        cart[existingProductIndex].quantity += 1;
+    } else {
+        cart.push({ id, title, image, price, quantity: 1 });
+    }
+
+    // Update localStorage and cart count
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    alert('Product added to cart');
+}
+
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCountElement = document.getElementById('cart-count');
+
+    const totalItems = cart.reduce((sum, product) => sum + product.quantity, 0);
+    cartCountElement.textContent = totalItems;
+}
+
+function goToCart() {
+    window.location.href = 'cart.html';
 }
