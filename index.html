@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <header>
+        <a href="#" class="logo">Ecommerce</a>
         <nav>
-            <h1>Ecommerce</h1>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="#">Products</a></li>
-                <li><a href="#">Account</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Cart (0)</a></li>
             </ul>
         </nav>
+        <div class="auth-cart">
+            <a href="#"><button><i class="fa-solid fa-right-to-bracket"></i>Login</button></a>
+            <a href="#"><button><i class="fa-solid fa-user-plus"></i>Register</button></a>
+            <a href="cart.html"><button><i class="fa-solid fa-cart-shopping"></i>Cart (<span id="cart-count">0</span>)</button></a>
+        </div>
     </header>
 
-    <section class="banner">
+    
+
+    <section>
+        <div class="banner"><img src="./assets/main.png.jpg" alt="image">
+        </div>
+       <div class="text">
         <h2>New Season Arrivals</h2>
         <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       </div>
     </section>
 
     <section class="products">
@@ -42,10 +51,11 @@
     </section>
 
     <footer>
-        <p>Made with ❤️ by [Your Name]</p>
+        <p>Made with <i class="fa-solid fa-heart" style="color: #ff0a0a;"></i> by GEETHA SANABOINA</p>
     </footer>
 
     <script src="./app.js"></script>
+    <!-- <script src="./details.js"></script> -->
 </body>
 </html>
 
