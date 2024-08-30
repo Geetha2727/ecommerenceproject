@@ -95,7 +95,7 @@ function displayProductDetails(product) {
           <h3>${product.category}</h3>
           <h2>${product.title}</h2> 
           <p class="des">${product.description}</p>
-          <p class="rating">${product.rating.rate} ⭐</p>
+          <p class="rating">${product.rating.rate} <i class="fa-solid fa-star"></i></p>
           <p class="price">$${product.price}</p>
           <button onclick="addToCart(${product.id})">Add to Cart</button>
           <button onclick="goToCart()">Go To Cart</button>
