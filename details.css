@@ -100,6 +100,32 @@ button:hover {
     background-color: black;
     color: white;
 }
+
+.related-product {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.related-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.related-product img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+}
+.title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: x;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 footer {
     text-align: center;
     position: relative;
